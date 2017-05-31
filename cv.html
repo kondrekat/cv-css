@@ -4,74 +4,155 @@
 <head>
     <link rel="stylesheet" href="fa/css/font-awesome.min.css">
     <style>
-        .title-blue{
-            color: rgb(5, 112, 186);
+        .title-blue {
+            color: rgb(61, 108, 176);
         }
-        .upper{
+        
+        .upper {
             text-transform: uppercase;
         }
-        .col-1{
+        
+        .col-1 {
             width: 38%;
             float: left;
         }
-        .col-2{
+        
+        .col-2 {
             width: 58%;
             float: right;
         }
-        .container{
+        
+        .container {
             font-family: Arial, Helvetica, sans-serif;
-            width: 60%;
+            width: 900px;
             margin: auto;
-            }
-        .non-decorated-list{
-            list-style: none;
+
         }
-        .title-circle{
+        
+        .non-decorated-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .text-center{
+            text-align: center;
+        }
+
+        .fa {
+            color: white;
+            line-height: 30px;
+        }
+        
+
+        .blue {
+            background: rgb(61, 108, 176) !important;
+        }
+
+        
+
+
+
+
+        .title-line {
+            height: 5px;
+            background: rgb(61, 108, 176);
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        
+        .profile-line {
+            width: 187px;
+        }
+        
+        .contact-title-line {
+            width: 178px;
+        }
+        
+        .skills-title-line {
+            width: 201px;
+        }
+        
+        .education-title-line {
+            width: 323px;
+        }
+        
+        .experience-title-line {
+            width: 312px;
+        }
+        
+        .software-title-line {
+            width: 327px;
+        }
+        
+        .title-small-circle {
             height: 30px;
             width: 30px;
-            background: rgb(5, 112, 186);
+            background: rgb(61, 108, 176);
             border: 2px solid white;
-            box-shadow: 0 0 0 1px rgb(5, 112, 186);
+            box-shadow: 0 0 0 1px rgb(61, 108, 176);
+        }
+
+        .title-small-circle, .title-circle{
             border-radius: 50%;
             display: inline-block;
             text-align: center;
         }
-        .personal-info{
-            text-align: center; 
+
+
+
+
+        .personal-info {
+            text-align: center;
             margin-top: 50px;
         }
-        .photo{
-            height: 90px;
-            width: 90px;
+
+        .personal-info .name, .personal-info .surname, .personal-info .profession{
+            margin: 0;
         }
-        .fa{
-            color: white;
-            line-height: 30px;
+
+        .personal-info .name{
+            font-weight: normal;
+            margin-top: 20px;
         }
-        .title-line{
-            height: 5px;
-            background: rgb(5, 112, 186);
+        
+        .personal-info .title-circle {
+            height: 150px;
+            width: 150px;
+            border: 5px solid white;
+            box-shadow: 0 0 0 2px rgb(61, 108, 176);
+        }
+
+        .personal-info .photo {
+            background: url("22278746.jpg");
+            background-size: cover;
+        }
+        
+
+
+
+
+        .contact .width-block{
             display: inline-block;
-            margin-bottom: 5px;
+            width: 100px;
         }
-        .profile-line{
-            width: 187px;
+
+        .contact .contact-list-item:not(:last-child){
+            margin-bottom: 10px;
         }
-        .contact-title-line{
-            width: 178px;
+
+
+
+
+        .skill-range-item {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            background: rgb(231, 231, 231);
+            border-radius: 50%;
         }
-        .skills-title-line{
-            width: 201px;
-        }
-        .education-title-line{
-            width: 323px;
-        }
-        .experience-title-line{
-            width: 312px;
-        }
-        .software-title-line{
-            width: 327px;
-        }
+        
+        
+        
     </style>
 </head>
 
@@ -82,7 +163,7 @@
                 <div class="title-circle photo"></div>
                 <h1 class="name">EKATERINA</h1>
                 <h1 class="surname">KONDARETKO</h1>
-                <h2 class="profession">FRONTEND</h2>
+                <h3 class="profession">FRONTEND</h3>
             </div>
             <div class="profile">
                 <h3 class="upper title title-blue">
@@ -98,40 +179,93 @@
             </div>
             <div class="contact">
                 <h3 class="upper title title-blue">
-                    <span class="title-circle"><span class="fa fa-phone"></span></span> contact
+                    <span class="title-small-circle"><span class="fa fa-phone"></span></span> contact
                     <span class="title-line contact-title-line"></span>
                 </h3>
                 <ul class="non-decorated-list contact-list">
-                    <li class="contact-list-item"><span class="upper title title-blue">address</span> Tomsk</li>
-                    <li class="contact-list-item"><span class="upper title title-blue">e-mail</span></li>
-                    <li class="contact-list-item"><span class="upper title title-blue">phone</span></li>
-                    <li class="contact-list-item"><span class="upper title title-blue">website</span></li>
+                    <li class="contact-list-item"><span class="upper width-block title-blue"><b>address</b></span> Russia, Tomsk, Govorov st. 76</li>
+                    <li class="contact-list-item"><span class="upper width-block title-blue"><b>e-mail</b></span> kondratenko.es@gmail.com</li>
+                    <li class="contact-list-item"><span class="upper width-block title-blue"><b>phone</b></span> +7-999-495-9281</li>
+                    <li class="contact-list-item"><span class="upper width-block title-blue"><b>website</b></span> https://github.com/kondrekat</li>
                 </ul>
 
             </div>
             <div class="skills">
                 <h3 class="upper title title-blue">
-                    <span class="title-circle"><span class="fa fa-lightbulb-o"></span></span> skills
+                    <span class="title-small-circle"><span class="fa fa-lightbulb-o"></span></span> skills
                     <span class="title-line skills-title-line"></span>
                 </h3>
-                <span class="upper skill-title">creative</span>
-                <div class="skill-range"></div>
+                <div class="text-center">
+                    <span class="upper skill-title">creative</span>
+                    <div class="skill-range">
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                    </div>
 
-                <span class="upper skill-title">teamwork</span>
-                <div class="skill-range"></div>
+                    <span class="upper skill-title">teamwork</span>
+                    <div class="skill-range">
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                    </div>
 
-                <span class="upper skill-title">innovate</span>
-                <div class="skill-range"></div>
+                    <span class="upper skill-title">innovate</span>
+                    <div class="skill-range">
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                    </div>
 
-                <span class="upper skill-title">communication</span>
-                <div class="skill-range"></div>
-
+                    <span class="upper skill-title">communication</span>
+                    <div class="skill-range">
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item"></span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-2">
             <div class="education">
                 <h3 class="upper title title-blue">
-                    <span class="title-circle"><span class="fa fa-star"></span></span> education
+                    <span class="title-small-circle"><span class="fa fa-star"></span></span> education
                     <span class="title-line education-title-line"></span>
                 </h3>
                 <ul class="non-decorated-list education-list">
@@ -144,7 +278,7 @@
             </div>
             <div class="experience">
                 <h3 class="upper title title-blue">
-                    <span class="title-circle"><span class="fa fa-suitcase"></span></span> experience
+                    <span class="title-small-circle"><span class="fa fa-suitcase"></span></span> experience
                     <span class="title-line experience-title-line"></span>
                 </h3>
                 <ul class="non-decorated-list experience-list">
@@ -156,17 +290,17 @@
             </div>
             <div class="software">
                 <h3 class="upper title title-blue">
-                    <span class="title-circle"><span class="fa fa-laptop"></span></span> software
+                    <span class="title-small-circle"><span class="fa fa-laptop"></span></span> software
                     <span class="title-line software-title-line"></span>
                 </h3>
-                
-                <span class="upper software-skill-title"></span>
+
+                <span class="upper software-skill-title">HTML/CSS</span>
                 <div class="software-skill-range"></div>
-                
-                <span class="upper software-skill-title"></span>
+
+                <span class="upper software-skill-title">JavaScript</span>
                 <div class="software-skill-range"></div>
-                
-                <span class="upper software-skill-title"></span>
+
+                <span class="upper software-skill-title">Angular</span>
                 <div class="software-skill-range"></div>
             </div>
         </div>
