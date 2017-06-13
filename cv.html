@@ -4,8 +4,13 @@
 <head>
     <link rel="stylesheet" href="fa/css/font-awesome.min.css">
     <style>
+        :root {
+            --blue: rgb(61, 108, 176);
+            --light-gray: rgb(231, 231, 231);
+            --white: rgb(255, 255, 255);
+        }
         .title-blue {
-            color: rgb(61, 108, 176);
+            color: var(--blue);
         }
 
         .upper {
@@ -22,7 +27,7 @@
             width: 58%;
             float: right;
         }
-
+/*uuh*/
         .container {
             font-family: Arial, Helvetica, sans-serif;
             width: 900px;
@@ -39,12 +44,12 @@
         }
 
         .fa {
-            color: white;
+            color: var(--white);
             line-height: 30px;
         }
 
         .blue {
-            background: rgb(61, 108, 176) !important;
+            background: var(--blue) !important;
         }
 
 
@@ -54,23 +59,23 @@
         .title-line {
             height: 5px;
             width: 100%;
-            background: rgb(61, 108, 176);
+            background: var(--blue);
             display: inline-block;
             margin-bottom: 3px;
         }
 
         .title-text-wrapper {
             position: absolute;
-            background: white;
+            background: var(--white);
             padding-right: 5px;
         }
 
         .title-small-circle {
             height: 30px;
             width: 30px;
-            background: rgb(61, 108, 176);
-            border: 2px solid white;
-            box-shadow: 0 0 0 1px rgb(61, 108, 176);
+            background: var(--blue);
+            border: 2px solid var(--white);
+            box-shadow: 0 0 0 1px var(--blue);
         }
 
         .title-small-circle,
@@ -102,8 +107,8 @@
         .personal-info .title-circle {
             height: 150px;
             width: 150px;
-            border: 5px solid white;
-            box-shadow: 0 0 0 2px rgb(61, 108, 176);
+            border: 5px solid var(--white);
+            box-shadow: 0 0 0 2px var(--blue);
         }
 
         .personal-info .photo {
@@ -128,16 +133,31 @@
             display: inline-block;
             height: 10px;
             width: 10px;
-            background: rgb(231, 231, 231);
+            background: var(--light-gray);
             border-radius: 50%;
         }
 
 
-        .software .software-skill-range{
+        .software .software-skill-range .software-skill-range-line, 
+        .software .software-skill-range .software-skill-range-blue-line {
             height: 15px;
-            width: 50px;
-            background: gray;
+            display: inline-block;
         }
+
+        .software .software-skill-range .software-skill-range-line{
+            width: 100px;
+            background: var(--light-gray);
+        }
+
+        .software .software-skill-range .software-skill-range-blue-line{
+            background: var(--blue);
+        }
+
+        .software .software-skill-range .software-skill-range-blue-line.html{
+            width: 75%;
+        }
+
+
     </style>
 </head>
 
@@ -182,18 +202,16 @@
                     <span class="title-line skills-title-line"></span>
                 </h3>
                 <div class="text-center">
-                    <span class="upper skill-title">creative</span>
+                    <span class="upper skill-title">learnability</span>
                     <div class="skill-range">
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                     </div>
@@ -210,8 +228,6 @@
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
                     </div>
 
                     <span class="upper skill-title">innovate</span>
@@ -219,12 +235,10 @@
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
@@ -235,13 +249,27 @@
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
+                    </div>
+
+                    <span class="upper skill-title">ability to read minds
+                    </span>
+                    <br>(guess what the designer or customer meant)
+                    <div class="skill-range">
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                     </div>
@@ -258,14 +286,14 @@
                     <li class="education-list-item">
                         <span class="upper title title-blue"><b>master degree</b></span> // Sep 2015 - Jun 2018
                         <br>
-                        <span class="upper">Tomsk State University</span>
+                        <span class="upper"><b>Tomsk State University</b></span>
                         <br> Faculty of Applied Mathematics and Cybernetics, Department of Software Engineering, Programm:
                         Mathematical and software of computers and computer networks
                     </li>
                     <li class="education-list-item">
                         <span class="upper title title-blue"><b>bachelor degree</b></span> // Sep 2010 - Jun 2015
                         <br>
-                        <span class="upper">Tomsk State University</span>
+                        <span class="upper"><b>Tomsk State University</b></span>
                         <br> Faculty of Applied Mathematics and Cybernetics, Department of Software Engineering, Programm:
                         Applied Mathematics and Informatics
                     </li>
@@ -289,10 +317,14 @@
                     <span class="title-line experience-title-line"></span>
                 </h3>
                 <ul class="non-decorated-list experience-list">
-                    <li class="experience-list-item"><span class="upper title title-black">address</span></li>
-                    <li class="experience-list-item"><span class="upper title title-black">address</span></li>
-                    <li class="experience-list-item"><span class="upper 
-                    title title-black">address</span></li>
+                    <li class="experience-list-item"><span class="upper title"><b>NTR lab</b> // Nov 2016 - Present</span>
+                    <br>Web Programmer: frontend (Angular 1.x and Angular 2), html&css, current project support 
+                    <br>Achievements:
+                    <ul>
+                        <li>Refactor 3000 line style file (in 2 years old project) and move it to scss</li>
+                        <li>Convince team to use Angular 2 instead of Angular 1</li>
+                    </ul>
+                    </li>
                 </ul>
             </div>
             <div class="software">
@@ -302,7 +334,9 @@
                 </h3>
 
                 <span class="upper software-skill-title">HTML/CSS</span>
-                <div class="software-skill-range"></div>
+                <div class="software-skill-range">
+                    <span class="software-skill-range-line"><span class="software-skill-range-blue-line html"></span></span>
+                </div>
 
                 <span class="upper software-skill-title">JavaScript</span>
                 <div class="software-skill-range"></div>
