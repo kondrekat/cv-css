@@ -4,13 +4,14 @@
 <head>
     <link rel="stylesheet" href="fa/css/font-awesome.min.css">
     <style>
-        :root {
-            --blue: rgb(61, 108, 176);
-            --light-gray: rgb(231, 231, 231);
-            --white: rgb(255, 255, 255);
+        body {
+            background: #d3d1d2;
+            display: flex;
+            justify-content: space-around;
         }
+
         .title-blue {
-            color: var(--blue);
+            color: rgb(61, 108, 176);
         }
 
         .upper {
@@ -19,19 +20,26 @@
         }
 
         .col-1 {
-            width: 38%;
-            float: left;
+            margin-right: 20px;
         }
 
         .col-2 {
-            width: 58%;
-            float: right;
+            -ms-grid-column: 2;
         }
-/*uuh*/
+
         .container {
             font-family: Arial, Helvetica, sans-serif;
-            width: 900px;
-            margin: auto;
+            font-size: 15px;
+            width: 707px;
+            height: calc(707px*1.4142);
+            position: relative;
+            background: white;
+            padding: 30px;
+            box-shadow: 10px 10px 20px 0 gray;
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 4fr 5fr;
+            grid-template-columns: 4fr 5fr;
         }
 
         .non-decorated-list {
@@ -44,12 +52,12 @@
         }
 
         .fa {
-            color: var(--white);
+            color: white;
             line-height: 30px;
         }
 
         .blue {
-            background: var(--blue) !important;
+            background: rgb(61, 108, 176) !important;
         }
 
 
@@ -59,23 +67,23 @@
         .title-line {
             height: 5px;
             width: 100%;
-            background: var(--blue);
+            background: rgb(61, 108, 176);
             display: inline-block;
             margin-bottom: 3px;
         }
 
         .title-text-wrapper {
             position: absolute;
-            background: var(--white);
+            background: white;
             padding-right: 5px;
         }
 
         .title-small-circle {
             height: 30px;
             width: 30px;
-            background: var(--blue);
-            border: 2px solid var(--white);
-            box-shadow: 0 0 0 1px var(--blue);
+            background: rgb(61, 108, 176);
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px rgb(61, 108, 176);
         }
 
         .title-small-circle,
@@ -90,7 +98,7 @@
 
         .personal-info {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 40px;
         }
 
         .personal-info .name,
@@ -105,15 +113,20 @@
         }
 
         .personal-info .title-circle {
-            height: 150px;
-            width: 150px;
-            border: 5px solid var(--white);
-            box-shadow: 0 0 0 2px var(--blue);
+            height: 120px;
+            width: 120px;
+            border: 5px solid white;
+            box-shadow: 0 0 0 2px rgb(61, 108, 176);
         }
 
         .personal-info .photo {
             background: url("22278746.jpg");
             background-size: cover;
+        }
+
+        .personal-info .name,
+        .personal-info .surname {
+            font-size: 26px;
         }
 
 
@@ -122,19 +135,32 @@
 
         .contact .width-block {
             display: inline-block;
-            width: 100px;
+            width: 80px;
         }
 
+        .skills .skill-title {
+            line-height: 20px;
+        }
 
-
-
-
-        .skill-range-item {
+        .skills .skill-range-item {
             display: inline-block;
-            height: 10px;
-            width: 10px;
-            background: var(--light-gray);
+            height: 12px;
+            width: 12px;
+            background: rgb(231, 231, 231);
             border-radius: 50%;
+        }
+
+        .skills .skill-range-item:not(:last-child) {
+            margin-right: 3px;
+        }
+
+        .software-contenr-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .software-contenr-wrapper .col-1 {
+            margin-right: 10px;
         }
 
 
@@ -145,16 +171,48 @@
         }
 
         .software .software-skill-range .software-skill-range-line{
-            width: 100px;
-            background: var(--light-gray);
+            width: 170px;
+            background: rgb(231, 231, 231);
         }
 
         .software .software-skill-range .software-skill-range-blue-line{
-            background: var(--blue);
+            background: rgb(61, 108, 176);
         }
 
-        .software .software-skill-range .software-skill-range-blue-line.html{
-            width: 75%;
+        .html, .css{
+            width: 80%;
+        }
+
+        .bootstrap {
+            width: 70%;
+        }
+
+        .sass {
+            width: 73%;
+        }
+
+        .svg {
+            width: 51%;
+        }
+
+        .js {
+            width: 62%;
+        }
+
+        .ajs {
+            width: 45%;
+        }
+
+        .a2 {
+            width: 67%;
+        }
+
+        .i2 {
+            width: 70%;
+        }
+
+        .git {
+            width: 50%;
         }
 
 
@@ -176,10 +234,11 @@
                     <span class="title-line profile-line"></span>
                 </h3>
                 <p class="profile-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    <b>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b>
+                    Woman, 24 years old, was born on March 18, 1993 
+                    <br>Tomsk, ready to move, ready for rare business trips
+                    <br>Work experience 8 months
+                    <br>Employment: full-time, part-time
+                    <br>Work schedule: full day, flexible schedule
                 </p>
             </div>
             <div class="contact">
@@ -212,6 +271,8 @@
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                     </div>
@@ -221,9 +282,11 @@
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
@@ -239,9 +302,11 @@
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
-                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
                     </div>
 
                     <span class="upper skill-title">communication</span>
@@ -251,7 +316,9 @@
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
-                        <span class="skill-range-item"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
@@ -270,6 +337,8 @@
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
                         <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item blue"></span>
+                        <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                         <span class="skill-range-item"></span>
                     </div>
@@ -284,30 +353,36 @@
                 </h3>
                 <ul class="non-decorated-list education-list">
                     <li class="education-list-item">
-                        <span class="upper title title-blue"><b>master degree</b></span> // Sep 2015 - Jun 2018
-                        <br>
-                        <span class="upper"><b>Tomsk State University</b></span>
-                        <br> Faculty of Applied Mathematics and Cybernetics, Department of Software Engineering, Programm:
-                        Mathematical and software of computers and computer networks
+                        <span class="education-list-item-content">
+                            <span class="upper title title-blue"><b>master degree</b></span> // Sep 2015 - Jun 2018
+                            <br>
+                            <span class="upper"><b>Tomsk State University</b></span>
+                            <br> Faculty of Applied Mathematics and Cybernetics, Department of Software Engineering, Programm:
+                            Mathematical and software of computers and computer networks
+                        </span>
                     </li>
                     <li class="education-list-item">
-                        <span class="upper title title-blue"><b>bachelor degree</b></span> // Sep 2010 - Jun 2015
-                        <br>
-                        <span class="upper"><b>Tomsk State University</b></span>
-                        <br> Faculty of Applied Mathematics and Cybernetics, Department of Software Engineering, Programm:
-                        Applied Mathematics and Informatics
+                        <span class="education-list-item-content">
+                            <span class="upper title title-blue"><b>bachelor degree</b></span> // Sep 2010 - Jun 2015
+                            <br>
+                            <span class="upper"><b>Tomsk State University</b></span>
+                            <br> Faculty of Applied Mathematics and Cybernetics, Department of Software Engineering, Programm:
+                            Applied Mathematics and Informatics
+                        </span>
                     </li>
                     <li class="education-list-item">
-                        <span class="upper title title-blue"><b>extra courses:</b></span>
-                        <ul>
-                            <li>Codecademy: jQuery // 2017</li>
-                            <li>Codecademy: JavaScript // 2016</li>
-                            <li>Codecademy: ReactJS // 2016</li>
-                            <li>Codecademy: PHP // 2016</li>
-                            <li>Codecademy: Git // 2016</li>
-                            <li>Codecademy: Sass // 2016</li>
-                            <li>HtmlAcademy: HTML&CSS // 2016</li>
-                        </ul>
+                        <span class="education-list-item-content">
+                            <span class="upper title title-blue"><b>extra courses:</b></span>
+                            <ul>
+                                <li>Codecademy: jQuery // 2017</li>
+                                <li>Codecademy: JavaScript // 2016</li>
+                                <li>Codecademy: ReactJS // 2016</li>
+                                <li>Codecademy: PHP // 2016</li>
+                                <li>Codecademy: Git // 2016</li>
+                                <li>Codecademy: Sass // 2016</li>
+                                <li>HtmlAcademy: HTML&CSS // 2016</li>
+                            </ul>
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -332,17 +407,61 @@
                     <span class="title-text-wrapper"><span class="title-small-circle"><span class="fa fa-laptop"></span></span> software</span>
                     <span class="title-line software-title-line"></span>
                 </h3>
+                <div class="software-contenr-wrapper">
+                    <div class="col-1">
+                        <span class="upper software-skill-title">HTML/HTML5</span>
+                        <div class="software-skill-range">
+                            <span class="software-skill-range-line"><span class="software-skill-range-blue-line html"></span></span>
+                        </div>
 
-                <span class="upper software-skill-title">HTML/CSS</span>
-                <div class="software-skill-range">
-                    <span class="software-skill-range-line"><span class="software-skill-range-blue-line html"></span></span>
+                        <span class="upper software-skill-title">CSS/CSS3</span>
+                        <div class="software-skill-range">
+                            <span class="software-skill-range-line"><span class="software-skill-range-blue-line css"></span></span>
+                        </div>
+
+                        <span class="upper software-skill-title">Bootstrap</span>
+                        <div class="software-skill-range">
+                            <span class="software-skill-range-line"><span class="software-skill-range-blue-line bootstrap"></span></span>
+                        </div>
+
+                        <span class="upper software-skill-title">Sass</span>
+                        <div class="software-skill-range">
+                            <span class="software-skill-range-line"><span class="software-skill-range-blue-line sass"></span></span>
+                        </div>
+
+                        <span class="upper software-skill-title">SVG</span>
+                        <div class="software-skill-range">
+                            <span class="software-skill-range-line"><span class="software-skill-range-blue-line svg"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <span class="upper software-skill-title">JavaScript</span>
+                        <div class="software-skill-range">
+                            <span class="software-skill-range-line"><span class="software-skill-range-blue-line js"></span></span>
+                        </div>
+
+                        <span class="upper software-skill-title">AngularJS</span>
+                        <div class="software-skill-range">
+                            <span class="software-skill-range-line"><span class="software-skill-range-blue-line ajs"></span></span>
+                        </div>
+
+                        <span class="upper software-skill-title">Angular2</span>
+                        <div class="software-skill-range">
+                            <span class="software-skill-range-line"><span class="software-skill-range-blue-line a2"></span></span>
+                        </div>
+
+                        <span class="upper software-skill-title">Ionic 2</span>
+                        <div class="software-skill-range">
+                            <span class="software-skill-range-line"><span class="software-skill-range-blue-line i2"></span></span>
+                        </div>
+
+                        <span class="upper software-skill-title">Git</span>
+                        <div class="software-skill-range">
+                            <span class="software-skill-range-line"><span class="software-skill-range-blue-line git"></span></span>
+                        </div>
+                    </div>
                 </div>
-
-                <span class="upper software-skill-title">JavaScript</span>
-                <div class="software-skill-range"></div>
-
-                <span class="upper software-skill-title">Angular</span>
-                <div class="software-skill-range"></div>
             </div>
         </div>
     </div>
