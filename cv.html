@@ -143,7 +143,7 @@
             margin-right: 3px;
         }
 
-        .software-contenr-wrapper {
+        .software-contener-wrapper {
             display: flex;
             justify-content: space-between;
         }
@@ -202,8 +202,31 @@
         .git {
             width: 50%;
         }
+        @media (max-width: 860px) {
+            .container {
+                display: block;
+                height: auto;
+                width: 430px;
+            }
 
+            .container .col-1 {
+                margin-right: 0;
+            }
+        }
 
+        @media (max-width: 430px) {
+            .container {
+                width: 100%;
+            }
+
+            .software-contener-wrapper {
+                display: block;
+            }
+
+            .software-contenr-wrapper .col-1 {
+                margin-right: 0;
+            }
+        }
     </style>
 </head>
 
@@ -395,7 +418,7 @@
                     <span class="title-text-wrapper"><span class="title-small-circle"><span class="fa fa-laptop"></span></span> software</span>
                     <span class="title-line software-title-line"></span>
                 </h3>
-                <div class="software-contenr-wrapper">
+                <div class="software-contener-wrapper">
                     <div class="col-1">
                         <span class="upper software-skill-title">HTML/HTML5</span>
                         <div class="software-skill-range">

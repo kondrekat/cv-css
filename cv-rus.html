@@ -202,7 +202,31 @@
         .git {
             width: 50%;
         }
+        @media (max-width: 860px) {
+            .container {
+                display: block;
+                height: auto;
+                width: 430px;
+            }
 
+            .container .col-1 {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .container {
+                width: 100%;
+            }
+
+            .software-contener-wrapper {
+                display: block;
+            }
+
+            .software-contenr-wrapper .col-1 {
+                margin-right: 0;
+            }
+        }
 
     </style>
 </head>
